@@ -1,37 +1,28 @@
 @color-step-error: #f44336;
-
 @swift-ease-out-duration: 0.4s;
 @swift-ease-out-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
 @swift-ease-out: all @swift-ease-out-duration @swift-ease-out-timing-function;
-
 @swift-ease-in-duration: 0.3s;
 @swift-ease-in-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
 @swift-ease-in: all @swift-ease-in-duration @swift-ease-in-timing-function;
-
 @swift-ease-in-out-duration: 0.5s;
 @swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
 @swift-ease-in-out: all @swift-ease-in-out-duration @swift-ease-in-out-timing-function;
-
 @swift-linear-duration: 0.08s;
 @swift-linear-timing-function: linear;
 @swift-linear: all @swift-linear-duration @swift-linear-timing-function;
-
 md-stepper {
   display: block;
 }
 
-
-
-md-steppers-header,md-steppers-mobile-header, md-step-actions {
+md-steppers-header, md-steppers-mobile-header, md-step-actions {
   flex: 0 0 auto;
   box-sizing: border-box;
 }
 
-
-.md-steppers-header-region{
+.md-steppers-header-region {
   z-index: 1;
 }
-
 
 @media (max-width: 599px) {
   md-stepper {
@@ -39,7 +30,7 @@ md-steppers-header,md-steppers-mobile-header, md-step-actions {
     flex-direction: row;
     > div {
       min-width: 0px;
-      flex:1;
+      flex: 1;
     }
   }
   .md-steppers-content {
@@ -49,43 +40,32 @@ md-steppers-header,md-steppers-mobile-header, md-step-actions {
   }
   md-step.md-active {
     min-height: 0px;
-    flex:1;
+    flex: 1;
     display: flex;
     flex-direction: column;
     .md-stepper {
       display: flex;
       flex-direction: column;
-      flex:1;
+      flex: 1;
       min-height: 0px;
     }
   }
-
-
   md-steppers-scope {
-    flex:1;
+    flex: 1;
   }
   md-step-body {
-    flex:1;
+    flex: 1;
   }
 }
-
-
-
-
-
 
 .md-steppers {
   display: flex;
   flex-flow: column;
-
   &:not(.md-steppers-linear) {
     .md-stepper-indicator {
-      &:not(.md-active):not(.md-completed):hover,
-      &.md-editable.md-completed:hover {
+      &:not(.md-active):not(.md-completed):hover, &.md-editable.md-completed:hover {
         cursor: pointer;
-
-        &,
-        .md-stepper-indicator-wrapper {
+        &, .md-stepper-indicator-wrapper {
           background-color: #F6F6F6;
         }
       }
@@ -104,13 +84,11 @@ md-steppers-header,md-steppers-mobile-header, md-step-actions {
 .md-steppers-horizontal {
   .md-stepper-indicator {
     min-height: 72px;
-    
     &:first-child {
       .md-stepper-indicator-wrapper {
         padding-left: 16px;
       }
     }
-    
     &:after {
       width: 999em;
       height: 1px;
@@ -126,7 +104,7 @@ md-steppers-header,md-steppers-mobile-header, md-step-actions {
 }
 
 .md-stepper-indicator {
-  margin:0;
+  margin: 0;
   padding: 0 16px;
   position: relative;
   display: flex;
@@ -138,73 +116,57 @@ md-steppers-header,md-steppers-mobile-header, md-step-actions {
   background: none;
   border: none;
   transition: @swift-ease-out;
-
   &:focus {
     outline: none;
   }
-
-  &.md-completed,
-  &.md-active {
+  &.md-completed, &.md-active {
     .md-stepper-number {
       background-color: #2196F3;
     }
-
     .md-stepper-title {
       color: rgba(0, 0, 0, .87);
     }
   }
-
-  &.md-active,
-  &.md-editable {
+  &.md-active, &.md-editable {
     .md-stepper-title {
       font-weight: 500;
     }
   }
-
   &.md-error {
     .md-stepper-title {
       color: @color-step-error;
     }
   }
-
   &:first-child {
     padding-left: 0;
-
     // .md-stepper-indicator-wrapper {
     //   padding-left: 16px;
     // }
   }
-
   &:last-child {
     padding-right: 0;
     justify-content: flex-end;
-
     .md-stepper-indicator-wrapper {
       padding-right: 24px;
     }
   }
-
-  
-
   .md-ripple-container {
     z-index: 3;
   }
 }
 
 .md-stepper-indicator-wrapper {
-  padding: 0 8px 0 0;
+  padding: 8px;
   position: relative;
   z-index: 2;
   display: flex;
   align-items: center;
   align-content: center;
-  background-color: #fff;
   transition: @swift-ease-out;
 }
 
 .md-stepper-number {
-  @size: 24px;
-
+  @size: 30px;
   width: @size;
   height: @size;
   margin: 0 8px;
@@ -215,7 +177,6 @@ md-steppers-header,md-steppers-mobile-header, md-step-actions {
   font-size: 12px;
   line-height: @size;
   text-align: center;
-
   &.ng-hide {
     transition: none;
   }
@@ -225,12 +186,10 @@ md-steppers-header,md-steppers-mobile-header, md-step-actions {
   .md-stepper-error-indicator {
     margin: 0 8px;
     background-color: #fff;
-
     md-icon {
       color: @color-step-error;
     }
   }
-
   .md-stepper-error-message {
     color: @color-step-error;
     font-weight: 400;
@@ -239,7 +198,6 @@ md-steppers-header,md-steppers-mobile-header, md-step-actions {
 
 .md-stepper-icon {
   @size: 18px;
-
   width: @size;
   height: @size;
   position: relative;
@@ -247,10 +205,8 @@ md-steppers-header,md-steppers-mobile-header, md-step-actions {
   color: #fff;
   font-size: @size;
   font-weight: 700;
-
   &.md-stepper-icon-edit {
     @size: 14px;
-
     width: @size;
     height: @size;
     font-size: @size;
@@ -264,7 +220,7 @@ md-steppers-header,md-steppers-mobile-header, md-step-actions {
   position: relative;
   transition: @swift-ease-out;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 30px;
 }
 
 .md-steppers-content {
@@ -276,7 +232,6 @@ md-steppers-header,md-steppers-mobile-header, md-step-actions {
 // md-stepper {
 //   display: block;
 // }
-
 .md-stepper {
   box-sizing: border-box;
   //position: absolute;
@@ -286,7 +241,6 @@ md-steppers-header,md-steppers-mobile-header, md-step-actions {
   // pointer-events: none;
   // opacity: 0;
   //transition: .4s cubic-bezier(.35, 0, .25, 1);
-
   &.md-active {
     position: relative;
     pointer-events: auto;
@@ -298,19 +252,15 @@ md-steppers-header,md-steppers-mobile-header, md-step-actions {
   display: flex;
 }
 
-
 // --------------------------------------------------
 // OPTIONAL
-
 .md-stepper-optional {
   .md-stepper-title {
     text-align: left;
     white-space: nowrap;
-
     small:not(.md-stepper-error-message) {
       color: rgba(0, 0, 0, .54);
     }
-
     small {
       transition: @swift-ease-out;
       font-size: 12px;
@@ -319,35 +269,25 @@ md-steppers-header,md-steppers-mobile-header, md-step-actions {
   }
 }
 
-
-
 // --------------------------------------------------
 // LINEAR
-
 .md-steppers-linear {
   .md-stepper-indicator {
     cursor: default;
-
     &.md-editable.md-completed:hover {
       cursor: pointer;
-
-      &,
-      .md-stepper-indicator-wrapper {
+      &, .md-stepper-indicator-wrapper {
         background-color: #F6F6F6;
       }
-
       .md-stepper-number {
-        &:before,
-        &:after {
+        &:before, &:after {
           background-color: #F6F6F6;
         }
       }
     }
   }
-
   .md-stepper-title {
     color: rgba(0, 0, 0, .26);
-
     small:not(.md-stepper-error-message) {
       color: rgba(0, 0, 0, .26);
     }
@@ -356,70 +296,55 @@ md-steppers-header,md-steppers-mobile-header, md-step-actions {
 
 // --------------------------------------------------
 // ALTERNATIVE
-
 .md-steppers-alternative {
   &:not(.md-steppers-linear) {
     .md-stepper-indicator:not(.md-active):not(.md-completed):hover {
       .md-stepper-indicator-wrapper {
         background: none;
       }
-
       .md-stepper-number {
-        &:before,
-        &:after {
+        &:before, &:after {
           background-color: #F6F6F6;
         }
       }
     }
   }
-
   .md-steppers-horizontal {
     .md-stepper-indicator {
       min-height: 104px;
       padding: 24px 16px;
       flex: 1;
       justify-content: center;
-
       .md-stepper-indicator-wrapper {
         padding: 0;
       }
-
       &:first-child {
         padding-left: 24px;
-
         &:after {
           left: 50%;
         }
       }
-
       &:last-child {
         padding-right: 24px;
-
         &:after {
           right: 50%;
           left: auto;
         }
       }
-
       &:after {
         margin-top: 0;
         top: 36px;
       }
     }
-
     .md-stepper-indicator-wrapper {
       padding: 0 16px;
       min-height: 50px;
       flex-flow: column nowrap;
       background: none;
     }
-
-    .md-stepper-number,
-    .md-stepper-error-indicator {
+    .md-stepper-number, .md-stepper-error-indicator {
       position: relative;
-
-      &:before,
-      &:after {
+      &:before, &:after {
         width: 8px;
         position: absolute;
         top: 0;
@@ -428,16 +353,13 @@ md-steppers-header,md-steppers-mobile-header, md-step-actions {
         transition: @swift-ease-out;
         content: " ";
       }
-
       &:before {
         left: -8px;
       }
-
       &:after {
         right: -8px;
       }
     }
-
     .md-stepper-title {
       margin-top: 16px;
       line-height: 18px;
@@ -449,99 +371,84 @@ md-steppers-header,md-steppers-mobile-header, md-step-actions {
   }
 }
 
-
-
 // ------------------------------------------------
 // HORIZONTAL
- .md-steppers:not(.md-steppers-vertical) {
+.md-steppers:not(.md-steppers-vertical) {
   .md-steppers-header.md-steppers-vertical {
     display: none;
   }
 }
 
-
 // ------------------------------------------------
 // VERTICAL
-
-
-.md-steppers-vertical{
-  
+.md-steppers-vertical {
   .md-stepper {
-    padding: 8px 24px;
+    padding: 8px;
   }
-  
   .md-steppers-scope {
     //display: block;
-    margin-left:20px;
-    border-left: 1px solid  #E8E8E8;
+    margin-left: 30px;
+    border-left: 1px solid #E8E8E8;
     padding-left: 20px;
+    margin-top: 8px;
   }
-  
   .md-steppers-header.md-steppers-horizontal {
     display: none;
   }
 }
 
-
 // ------------------------------------------------
 // MOBILE-STEP-TEXT
-.md-steppers-mobile-header,.md-stepper-feedback-message {
+.md-steppers-mobile-header, .md-stepper-feedback-message {
   display: none;
 }
 
-
 @media (max-width: 599px) {
-
-.md-steppers-mobile-step-text:not(.md-steppers-vertical) {
+  .md-steppers-mobile-step-text:not(.md-steppers-vertical) {
     .md-stepper {
       padding: 0;
     }
     // md-step-body {
     //   padding: 24px;
     // }
-    
-    
     .md-steppers-mobile-header {
       display: block;
     }
-    .md-stepper-feedback-message{
-        display: flex;
+    .md-stepper-feedback-message {
+      display: flex;
     }
-    
     .md-steppers-header.md-steppers-horizontal {
       display: none;
     }
-    
     md-step-actions {
-      background: #f6f6f6 !important; 
+      background: #f6f6f6 !important;
       color: #202020 !important;
-      flex-direction:row;
-      box-sizing:border-box;
-      display:flex;
-      align-content:stretch;
-      align-items:stretch;
-      justify-content:space-between;
-      box-shadow:rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
+      flex-direction: row;
+      box-sizing: border-box;
+      display: flex;
+      align-content: stretch;
+      align-items: stretch;
+      justify-content: space-between;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
     }
   }
 }
 
 // ------------------------------------------------
 // Feedback
-
 .md-steppers-header-region {
   position: relative;
 }
 
 .md-stepper-feedback-message {
-  position:absolute;
-  top:0;
-  left:0;
+  position: absolute;
+  top: 0;
+  left: 0;
   bottom: 0;
   width: 100%;
   background-color: #fff;
   align-items: center;
-//   display: flex;
+  //   display: flex;
   padding-left: 10px;
   z-index: 2;
   box-sizing: border-box;
@@ -550,30 +457,32 @@ md-steppers-header,md-steppers-mobile-header, md-step-actions {
 .md-steppers {
   position: relative;
 }
-md-step-body{
+
+md-step-body {
   position: relative;
-//   padding: 24px;
+  padding: 8px 16px;
   overflow: auto;
   display: flex;
   flex-direction: column;
 }
+
 .md-step-body-loading {
   display: none;
 }
 
 .md-steppers-has-feedback {
-  .md-steppers-overlay{
-    position:absolute;
-    top:0;
-    left:0;
+  .md-steppers-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     bottom: 0;
     width: 100%;
     z-index: 99;
   }
   .md-step-body-overlay {
-    position:absolute;
-    top:0;
-    left:0;
+    position: absolute;
+    top: 0;
+    left: 0;
     bottom: 0;
     width: 100%;
     z-index: 90;
@@ -582,9 +491,9 @@ md-step-body{
   }
   .md-step-body-loading {
     display: flex;
-    position:absolute;
-    top:0;
-    left:0;
+    position: absolute;
+    top: 0;
+    left: 0;
     bottom: 0;
     width: 100%;
     z-index: 91;

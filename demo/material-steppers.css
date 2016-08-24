@@ -175,7 +175,7 @@ md-step-actions {
   z-index: 3;
 }
 .md-stepper-indicator-wrapper {
-  padding: 0 8px 0 0;
+  padding: 8px;
   position: relative;
   z-index: 2;
   display: -webkit-flex;
@@ -187,19 +187,18 @@ md-step-actions {
   -webkit-align-content: center;
       -ms-flex-line-pack: center;
           align-content: center;
-  background-color: #fff;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .md-stepper-number {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   margin: 0 8px;
-  border-radius: 24px;
+  border-radius: 30px;
   background-color: #BDBDBD;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   color: #fff;
   font-size: 12px;
-  line-height: 24px;
+  line-height: 30px;
   text-align: center;
 }
 .md-stepper-number.ng-hide {
@@ -241,7 +240,7 @@ md-step-actions {
   position: relative;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   font-size: 14px;
-  line-height: 24px;
+  line-height: 30px;
 }
 .md-steppers-content {
   position: relative;
@@ -374,12 +373,13 @@ md-step-actions {
   display: none;
 }
 .md-steppers-vertical .md-stepper {
-  padding: 8px 24px;
+  padding: 8px;
 }
 .md-steppers-vertical .md-steppers-scope {
-  margin-left: 20px;
-  border-left: 1px solid  #E8E8E8;
+  margin-left: 30px;
+  border-left: 1px solid #E8E8E8;
   padding-left: 20px;
+  margin-top: 8px;
 }
 .md-steppers-vertical .md-steppers-header.md-steppers-horizontal {
   display: none;
@@ -448,6 +448,7 @@ md-step-actions {
 }
 md-step-body {
   position: relative;
+  padding: 8px 16px;
   overflow: auto;
   display: -webkit-flex;
   display: -ms-flexbox;

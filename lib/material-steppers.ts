@@ -73,7 +73,7 @@ class StepperCtrl {
      * @returns boolean - True if move and false if not move (e.g. On the last step)
      */
     public next() {
-        if (this.currentStep < this.steps.length) {
+        if (this.currentStep < (this.steps.length-1)) {
             this.clearError();
             this.currentStep++;
             this.clearFeedback();
@@ -306,7 +306,7 @@ angular.module('mdSteppers', ['ngMaterial'])
         $mdIconProvider.icon('steppers-warning', 'mdSteppers/ic_warning_24px.svg');
     }])
     .run(["$templateCache", function ($templateCache) {
-        $templateCache.put("mdSteppers/ic_check_24px.svg", "<svg height=\"24\" viewBox=\"0 0 24 24\" width=\"24\" xmlns=\"http://www.w3.org/2000/svg\">\r\n    <path d=\"M0 0h24v24H0z\" fill=\"none\"/>\r\n    <path d=\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\"/>\r\n</svg>");
+        $templateCache.put("mdSteppers/ic_check_24px.svg", '<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24" enable-background="new 0 0 24 24" width="48" height="48" style="fill: rgb(255, 255, 255);"> <path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 19.28125 5.28125 L 9 15.5625 L 4.71875 11.28125 L 3.28125 12.71875 L 8.28125 17.71875 L 9 18.40625 L 9.71875 17.71875 L 20.71875 6.71875 L 19.28125 5.28125 z" color="#000" overflow="visible" enable-background="accumulate" font-family="Bitstream Vera Sans"/> </svg>');
         $templateCache.put("mdSteppers/ic_warning_24px.svg", "<svg height=\"24\" viewBox=\"0 0 24 24\" width=\"24\" xmlns=\"http://www.w3.org/2000/svg\">\r\n    <path d=\"M0 0h24v24H0z\" fill=\"none\"/>\r\n    <path d=\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\"/>\r\n</svg>");
     }]);
 
