@@ -47,7 +47,7 @@ var StepperCtrl = (function () {
      * @returns boolean - True if move and false if not move (e.g. On the last step)
      */
     StepperCtrl.prototype.next = function () {
-        if (this.currentStep < (this.steps.length - 1)) {
+        if (this.currentStep < this.steps.length) {
             this.clearError();
             this.currentStep++;
             this.clearFeedback();

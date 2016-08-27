@@ -254,6 +254,7 @@ md-step-actions {
   font-size: 14px;
   line-height: 30px;
   font-weight: bold;
+  margin-left: 10px;
 }
 .md-steppers-content {
   position: relative;
