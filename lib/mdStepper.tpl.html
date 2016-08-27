@@ -20,7 +20,9 @@
                 </div>
 
                 <div class="md-stepper-error-indicator" ng-show="$step.hasError">
-                <md-icon md-svg-icon="steppers-warning"></md-icon>
+                <div class="md-stepper-number" ng-hide="$step.hasError">
+                    <md-icon md-svg-icon="steppers-warning" class="md-stepper-icon warning"></md-icon>
+                </div>
                 </div>
                 <div class="md-stepper-title">
                     <span>{{ $step.label }}</span>

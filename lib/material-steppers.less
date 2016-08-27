@@ -1,4 +1,4 @@
-@color-step-error: #f44336;
+@color-step-error: #ed473a;
 @swift-ease-out-duration: 0.4s;
 @swift-ease-out-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
 @swift-ease-out: all @swift-ease-out-duration @swift-ease-out-timing-function;
@@ -191,7 +191,7 @@ md-steppers-header, md-steppers-mobile-header, md-step-actions {
     }
   }
   .md-stepper-error-message {
-    color: @color-step-error;
+    // color: @color-step-error;
     font-weight: 400;
   }
 }
@@ -205,6 +205,15 @@ md-steppers-header, md-steppers-mobile-header, md-step-actions {
   color: #fff;
   font-size: @size;
   font-weight: 700;
+  svg {
+    height: 16px;
+    width: 16px;
+    margin-left: 4px;
+    margin-top: 4px;
+  }
+  &.warning {
+    color: @color-step-error;
+  }
   &.md-stepper-icon-edit {
     @size: 14px;
     width: @size;

@@ -224,6 +224,15 @@ md-step-actions {
   font-size: 18px;
   font-weight: 700;
 }
+.md-stepper-icon svg {
+  height: 16px;
+  width: 16px;
+  margin-left: 4px;
+  margin-top: 4px;
+}
+.md-stepper-icon.warning {
+  color: #ed473a;
+}
 .md-stepper-icon.md-stepper-icon-edit {
   width: 14px;
   height: 14px;
