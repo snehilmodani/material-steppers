@@ -157,7 +157,7 @@ md-step-actions {
   font-weight: 500;
 }
 .md-stepper-indicator.md-error .md-stepper-title {
-  color: #f44336;
+  color: #ed473a;
 }
 .md-stepper-indicator:first-child {
   padding-left: 0;
@@ -209,10 +209,9 @@ md-step-actions {
   background-color: #fff;
 }
 .md-error .md-stepper-error-indicator md-icon {
-  color: #f44336;
+  color: #ed473a;
 }
 .md-error .md-stepper-error-message {
-  color: #f44336;
   font-weight: 400;
 }
 .md-stepper-icon {
@@ -232,6 +231,13 @@ md-step-actions {
 }
 .md-stepper-icon.warning {
   color: #ed473a;
+}
+.md-stepper-icon.warning svg {
+  color: #ed473a;
+  height: 16px;
+  width: 16px;
+  margin-left: 4px;
+  margin-top: 4px;
 }
 .md-stepper-icon.md-stepper-icon-edit {
   width: 14px;
