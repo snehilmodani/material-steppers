@@ -1,4 +1,5 @@
 @color-step-error: #ed473a;
+@step-number-background-color: #EC9615;
 @swift-ease-out-duration: 0.4s;
 @swift-ease-out-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
 @swift-ease-out: all @swift-ease-out-duration @swift-ease-out-timing-function;
@@ -121,7 +122,10 @@ md-steppers-header, md-steppers-mobile-header, md-step-actions {
   }
   &.md-completed, &.md-active {
     .md-stepper-number {
-      background-color: #2196F3;
+      background-color: @step-number-background-color;
+      &.warning {
+        background-color: @color-step-error;
+      }
     }
     .md-stepper-title {
       color: rgba(0, 0, 0, .87);
