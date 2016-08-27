@@ -234,10 +234,10 @@ md-step-actions {
   margin-top: 4px;
 }
 .md-stepper-icon.warning svg {
-  height: 16px;
-  width: 16px;
-  margin-left: 4px;
-  margin-top: 4px;
+  height: 12px;
+  width: 12px;
+  margin-left: 6px;
+  margin-top: 6px;
 }
 .md-stepper-icon.md-stepper-icon-edit {
   width: 14px;
