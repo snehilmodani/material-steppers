@@ -160,9 +160,6 @@ md-step-actions {
 .md-stepper-indicator.md-editable .md-stepper-title {
   font-weight: 500;
 }
-.md-stepper-indicator.md-error .md-stepper-title {
-  color: #ed473a;
-}
 .md-stepper-indicator:first-child {
   padding-left: 0;
 }
@@ -256,6 +253,7 @@ md-step-actions {
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   font-size: 14px;
   line-height: 30px;
+  font-weight: bold;
 }
 .md-steppers-content {
   position: relative;
