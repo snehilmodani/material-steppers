@@ -22,6 +22,8 @@ bower install material-steppers --save
 npm install material-steppers --save
 ```
 
+**note**: works with angular 1.4.9
+
 ### Add to your module
 
 ```javascript
@@ -97,6 +99,16 @@ Detailed service operations bellow:
 - [x] Correct apply styles (css) of the material design
 - [x] Embed SVG Icon assets
 - [ ] Create a better demo page with all options.
+
+## Remarks
+
+- Based on:
+ - [MDL Stepper](https://github.com/ahlechandre/mdl-stepper)
+ - [MD Steppers](https://github.com/ipiz/md-steppers)
+ - [Angular Material Steppers](https://github.com/marcosmoura/angular-material-steppers)
+
+- Thanks to all ;)
+
 
 ## License
 
